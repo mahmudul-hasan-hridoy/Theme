@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.signedInStatus {
+  display: block;
+  min-height: 4rem;
+  width: 100%;
+}
+
+.loading,
+.loaded {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 0.6rem 1rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in;
+}
+
+.loading {
+  top: -2rem;
+  opacity: 0;
+}
+
+.signedInText,
+.notSignedInText {
+  position: absolute;
+  padding-top: 0.8rem;
+  left: 1rem;
+  right: 6.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inherit;
+  z-index: 1;
+  line-height: 1.3rem;
+}
+
+.signedInText {
+  padding-top: 0rem;
+  left: 4.6rem;
+}
+
+.avatar {
+  border-radius: 2rem;
+  float: left;
+  height: 2.8rem;
+  width: 2.8rem;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button,
+.buttonPrimary {
+  float: right;
+  margin-right: -0.4rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  padding: 0.7rem 0.8rem;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  color: #555;
+}
+
+.buttonPrimary {
+  background-color: #346df1;
+  border-color: #346df1;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+}
+
+.buttonPrimary:hover {
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.2);
+}
+
+.navItems {
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.navItem {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+
+#sideNav {
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.hamburger svg>*:nth-child(1),
+.hamburger svg>*:nth-child(2),
+.hamburger svg>*:nth-child(3) {
+  transform-origin: center;
+  transform: rotate(0)
+}
+
+.hamburger svg>*:nth-child(1) {
+  transition: y 75ms .12s ease, opacity 75ms ease, transform 75ms cubic-bezier(.55, .055, .675, .19)
+}
+
+.hamburger svg>*:nth-child(2) {
+  transition-property: transform;
+  transition-duration: 75ms;
+  transition-timing-function: cubic-bezier(.55, .055, .675, .19)
+}
+
+.hamburger svg>*:nth-child(3) {
+  transition: y 75ms .12s ease, transform 75ms cubic-bezier(.55, .055, .675, .19)
+}
+
+.hamburger.active svg>*:nth-child(1) {
+  opacity: 0;
+  transform: rotate(45deg);
+  y: 11;
+  transition: y 75ms ease, opacity 75ms .12s ease, transform 75ms .12s cubic-bezier(.215, .61, .355, 1)
+}
+
+.hamburger.active svg>*:nth-child(2) {
+  transform: rotate(45deg);
+  transition-delay: .12s;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+}
+
+.hamburger.active svg>*:nth-child(3) {
+  y: 11;
+  transform: rotate(-45deg);
+  transition: y 75ms ease, transform 75ms .12s cubic-bezier(.215, .61, .355, 1)
+}
