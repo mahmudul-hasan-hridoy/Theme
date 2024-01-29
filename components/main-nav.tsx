@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils"
 import CustomLink from "./custom-link"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -20,27 +19,15 @@ export function MainNav() {
     <div className="flex items-center space-x-2 lg:space-x-6">
       <CustomLink href="/">
         <Button variant="ghost" className="p-0">
-          <Image src="/next.svg" alt="Home" width="32" height="32" />
+          <img
+            src="logo.png"
+            alt="Logo"
+            className="h-10"
+          />
         </Button>
       </CustomLink>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Server Side</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/server-example" title="RSC Example">
-                  Protecting React Server Component.
-                </ListItem>
-                <ListItem href="/middleware-example" title="Middleware Example">
-                  Using Middleware to protect pages & APIs.
-                </ListItem>
-                <ListItem href="/api-example" title="Route Handler Example">
-                  Getting the session inside an API Route.
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
               href="/client-example"
