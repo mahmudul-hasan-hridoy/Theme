@@ -29,8 +29,8 @@ export default async function UserButton() {
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56" align="end" forceMount>
-        <DropdownMenuLabel className="font-normal">
+      <DropdownMenuContent className="w-56 bg-white dark:bg-slate-800" align="end" forceMount>
+        <DropdownMenuLabel className="font-normal bg-white dark:bg-slate-800">
           <div className="flex flex-col space-y-1 bg-white dark:bg-slate-800">
             <p className="text-sm font-medium leading-none text-gray-800 dark:text-gray-200">
               {session.user.name}

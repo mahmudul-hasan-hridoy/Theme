@@ -12,7 +12,7 @@ export function SignIn({
         await signIn(provider)
       }}
     >
-      <Button {...props}>Sign In</Button>
+      <Button className="bg-black dark:bg-white text-white dark:text-black" {...props}>Sign In</Button>
     </form>
   )
 }
@@ -26,7 +26,7 @@ export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
       }}
       className="w-full"
     >
-      <Button variant="ghost" className="w-full p-0" {...props}>
+      <Button variant="ghost" className="w-full p-0 bg-black dark:bg-white text-white dark:text-black" {...props}>
         Sign Out
       </Button>
     </form>

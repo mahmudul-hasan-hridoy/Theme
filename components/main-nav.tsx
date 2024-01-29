@@ -55,7 +55,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-sm leading-snug line-clamp-2 dark:text-gray-400 text-gray-500">
+          <p className="text-sm leading-snug line-clamp-2 dark:text-gray-200 text-gray-500">
             {children}
           </p>
         </a>
