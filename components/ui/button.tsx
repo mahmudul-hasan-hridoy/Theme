@@ -10,14 +10,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "dark:bg-blue-500 dark:text-white bg-blue-500 text-white hover:bg-blue-600",
-        destructive: "dark:bg-red-500 dark:text-white bg-red-500 text-white hover:bg-red-600",
-        outline: "dark:border-gray-300 dark:bg-white dark:text-gray-700 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50",
-        secondary: "dark:bg-gray-300 dark:text-gray-700 bg-gray-300 text-gray-700 hover:bg-gray-400",
+        default: "dark:bg-blue-500 dark:text-white bg-blue-500 text-white",
+        destructive:
+          "dark:bg-red-500 dark:text-white bg-red-500 text-white hover:bg-red-600",
+        outline:
+          "dark:border-gray-300 dark:bg-white dark:text-gray-700 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50",
+        secondary:
+          "dark:bg-gray-300 dark:text-gray-700 bg-gray-300 text-gray-700 hover:bg-gray-400",
         ghost: "dark:hover:bg-gray-100 hover:bg-gray-100",
         link: "dark:text-blue-500 dark:underline-offset-4 text-blue-500 underline-offset-4 hover:underline",
-        // Add your custom variant here:
-        custom: "dark:bg-blue-500 dark:text-white bg-blue-500 text-white hover:bg-blue-600",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -30,7 +31,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -49,7 +50,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = "Button";
 
